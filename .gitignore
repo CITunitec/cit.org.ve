@@ -43,3 +43,17 @@ $RECYCLE.BIN/
 
 #Jekyll generation files
 _site/*
+
+#Node.js
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+pids
+logs
+results
+npm-debug.log
