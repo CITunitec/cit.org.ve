@@ -32,7 +32,7 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 
 app.get('/*', function(req, res) {
-  res.render('404',{title:'404'});
+  res.render('404',{title:'CIT - 404'});
 });
 
 http.createServer(app).listen(app.get('port'), function(){
