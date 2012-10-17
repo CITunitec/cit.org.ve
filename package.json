@@ -1,14 +1,13 @@
-{
-  "name": "cit.org.ve",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
+{ "name": "cit.org.ve"
+, "version": "0.0.1"
+, "private": true
+, "scripts": {
     "start": "node app"
-  },
-  "dependencies": {
-    "express": "*",
-    "jade": "*",
-    "stylus": "*",
-    "nib": "*"
+  }
+, "dependencies":
+  { "express": "*"
+  , "jade": "*"
+  , "stylus": "*"
+  , "nib": "*"
   }
 }
