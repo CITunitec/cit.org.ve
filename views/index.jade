@@ -1,6 +1,108 @@
 extends layout
 
+block stylesheets
+  link(rel='stylesheet', href='/stylesheets/bootstrap-image-gallery.min.css')
+
 block content
   .container
     h1= title
-    p THIS IS CIT!
+    p
+      | El 
+      b Centro de Innovación Tecnológica
+      |  es un grupo de estudiantes de la 
+      b Universidad Tecnológica del Centro
+      |  dedicados al desarrollo individual y colectivo
+      |  de las competencias necesarias para formar parte
+      |  activamente del mercado nacional de tecnologías
+      |  de información y comunicaciones, siempre
+      |  proponiendo ideas 
+      b innovadoras
+      .
+  .container.dark
+    h2 ¿Quiénes Somos?
+    p
+      | Somos un grupo de estudiantes
+      | tanto de Ingeniería como de carreras Gerenciales,
+      | motivados para formar parte del futuro tecnológico en
+      | Venezuela y el mundo.
+      | Nos interesan los proyectos de código abierto y hardware abierto,
+      | para aprender y producir soluciones a bajo costo,
+      | hacemos eventos de divulgación tecnológica y participamos en iniciativas nacionales,
+      | hemos trabajado en distintas organizaciones con lo que hemos aprendido
+      | y estamos interesados en contagiarte con nuestra voluntad de trabajo y pasión
+      | por la calidad.
+    #gallery(data-toggle="modal-gallery", data-target="#modal-gallery")
+      a(href="http://imgur.com/TyJQm", title="Ricardo On Stage", rel="gallery")
+      a(href="http://imgur.com/TyJQm", title="Ricardo On Stage", rel="gallery")
+      a(href="http://imgur.com/TyJQm", title="Ricardo On Stage", rel="gallery")
+  .container
+    h2 ¿Qué Hacemos?
+    .span5
+      h5 Desarrollo Web
+      | Con los mejores estándares de calidad del mercado,
+      | utilizando tecnologías modernas, orientadas al
+      | desarrollo de productos 
+      b atractivos 
+      | , altamente 
+      b interactivos 
+      | y con una 
+      b integración 
+      | profunda con las 
+      b redes sociales
+      | .
+    .span5
+      h5 Administración de Sistemas
+      | Nuestro equipo multidisciplinario de técnicos
+      | posee experiencia en la administración y asesoría
+      | para la instalación y uso de sistemas 
+      b Linux 
+      | dedicados a proveer servicios de hospedaje,
+      | manejo de redes seguras, telefonía VoIP
+      | y mucho más.
+  .container
+    .span5
+      h5 Componentes Electrónicos
+      | Gracias a la asesoría de excelentes consultores
+      | dentro y fuera de la unviersidad, hoy en día poseemos
+      | un equipo dedicado al estudio y desarrollo de
+      | componentes electrónicos con precios totalmente accesibles
+      | mediante el uso de 
+      b Hardware Libre 
+      | venezolano, como lo es hoy en día 
+      b PingüinoVE
+      | .
+    .span5
+      h5 Eventos de Tecnología
+      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum volutpat dolor, eu fermentum elit varius iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis est libero, venenatis sollicitudin dignissim laoreet, rutrum a lacus. Duis augue justo, scelerisque vel dapibus sit amet, aliquam ut dolor.
+  .container
+    .span5
+      h5 Cursos de Capacitación
+      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum volutpat dolor, eu fermentum elit varius iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis est libero, venenatis sollicitudin dignissim laoreet, rutrum a lacus. Duis augue justo, scelerisque vel dapibus sit amet, aliquam ut dolor.
+    .span5
+      h5 Y lo demás... ¡Te ayudamos a solucionarlo!
+      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum volutpat dolor, eu fermentum elit varius iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis est libero, venenatis sollicitudin dignissim laoreet, rutrum a lacus. Duis augue justo, scelerisque vel dapibus sit amet, aliquam ut dolor.
+
+  #modal-gallery.modal.modal-gallery.hide.fade(tabindex="-1")
+    .modal-header
+      a.close(data-dismiss="modal") &times;
+      h3.modal-title
+    .modal-body
+      .modal-image
+    .modal-footer
+      a.btn.btn-primary.modal-next
+        | Next
+        i.icon-arrow-right.icon-white
+      a.btn.btn-info.modal-prev
+        i.icon-arrow-left.icon-white
+        | Previous
+      a.btn.btn-success.modal-play.modal-slideshow(data-slideshow="5000")
+        i.icon-play.icon-white
+        | Slideshow
+      a.btn.modal-download(target="_blank")
+        i.icon-download
+        | Download
+
+block scripts
+  script(src='http://blueimp.github.com/cdn/js/bootstrap.min.js')
+  script(src='http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js')
+  script(src='javascripts/bootstrap-image-gallery.min.js')
